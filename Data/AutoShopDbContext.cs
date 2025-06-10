@@ -8,7 +8,7 @@ public class AutoShopDbContext : DbContext
     public AutoShopDbContext(DbContextOptions<AutoShopDbContext> options)
         : base(options) {
     }
-
+    public DbSet<IdempotencyRecord> IdempotencyRecords { get; set; }
     public DbSet<User> Users { get; set; }
 
     public DbSet<Car> Cars { get; set; }
